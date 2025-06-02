@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Portfolios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            background: #f4f6fa;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: #22223b;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            width: 90vw;
+            max-width: 350px;
+            align-items: stretch;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(90deg, #4f8cff, #4666ff);
+            color: #fff;
+            padding: 1.1rem 2rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 4px 18px rgba(60, 90, 180, 0.11);
+            transition: transform 0.12s, box-shadow 0.12s;
+            cursor: pointer;
+            gap: 1rem;
+        }
+        .btn i {
+            font-size: 1.3em;
+        }
+        .btn:hover, .btn:focus {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 22px rgba(70, 102, 255, 0.17);
+            background: linear-gradient(90deg, #4666ff, #4f8cff);
+        }
+
+        .gallery-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+            margin-top: 2.2rem;
+            width: 90vw;
+            max-width: 350px;
+        }
+        .gallery-btn {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 160px;
+            border-radius: 25px;
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(70, 102, 255, 0.13);
+            color: #fff;
+            font-size: 2.4rem;
+            font-weight: 600;
+            transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+            border: none;
+            outline: none;
+            overflow: hidden;
+        }
+        .gallery-btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.60;
+            transition: opacity 0.2s;
+        }
+        .gallery-btn.gallery1::before {
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80');
+        }
+        .gallery-btn.gallery2::before {
+            background-image: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80');
+        }
+        .gallery-btn:hover, .gallery-btn:focus {
+            transform: scale(1.03);
+            box-shadow: 0 8px 26px rgba(70, 102, 255, 0.19);
+        }
+        .gallery-btn:hover::before,
+        .gallery-btn:focus::before {
+            opacity: 0.75;
+        }
+        .gallery-btn-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gallery-btn i {
+            font-size: 2.6rem;
+            margin-bottom: 0.7rem;
+            filter: drop-shadow(0 2px 6px rgba(0,0,0,0.18));
+        }
+        .gallery-btn span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.13);
+            text-align: center;
+            padding: 0 0.7em;
+            line-height: 1.35;
+        }
+
+        @media (max-width: 600px) {
+            .btn-group,
+            .gallery-group {
+                width: 100vw;
+                max-width: 98vw;
+            }
+            .gallery-btn {
+                height: 120px;
+                font-size: 2rem;
+            }
+            .gallery-btn i {
+                font-size: 2rem;
+                margin-bottom: 0.5rem;
+            }
+            .gallery-btn span {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Mes Portfolios</h1>
+    <div class="btn-group">
+        <a href="https://votre-site-1.com" class="btn" target="_blank">
+            <i class="fas fa-user"></i> Portfolio 1
+        </a>
+        <a href="https://votre-site-2.com" class="btn" target="_blank">
+            <i class="fas fa-briefcase"></i> Portfolio 2
+        </a>
+        <a href="https://votre-site-3.com" class="btn" target="_blank">
+            <i class="fas fa-camera"></i> Portfolio 3
+        </a>
+        <a href="https://votre-site-4.com" class="btn" target="_blank">
+            <i class="fas fa-code"></i> Portfolio 4
+        </a>
+    </div>
+    <div class="gallery-group">
+        <a href="https://votre-galerie-1.com" class="gallery-btn gallery1" target="_blank" title="Galerie Photo 1">
+            <div class="gallery-btn-content">
+                <i class="fas fa-images"></i>
+                <span>Galerie Photo 1</span>
+            </div>
+        </a>
+        <a href="https://votre-galerie-2.com" class="gallery-btn gallery2" target="_blank" title="Galerie Photo 2">
+            <div class="gallery-btn-content">
+                <i class="fas fa-photo-film"></i>
+                <span>Galerie Photo 2</span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
