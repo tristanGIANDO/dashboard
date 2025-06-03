@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Portfolios</title>
+    <title>Creative dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         body {
@@ -25,8 +25,8 @@
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
-            width: 90vw;
-            max-width: 350px;
+            width: 100vw;
+            max-width: 400px;
             align-items: stretch;
         }
         .btn {
@@ -97,6 +97,9 @@
         .gallery-btn.gallery2::before {
             background-image: url("https://raw.githubusercontent.com/tristanGIANDO/dashboard/refs/heads/main/images/animal.jpg");
         }
+        .gallery-btn.gallery3::before {
+            background-image: url("https://raw.githubusercontent.com/tristanGIANDO/dashboard/refs/heads/main/images/video.png");
+        }
         .gallery-btn:hover, .gallery-btn:focus {
             transform: scale(1.03);
             box-shadow: 0 8px 26px rgba(70, 102, 255, 0.19);
@@ -147,31 +150,52 @@
     </style>
 </head>
 <body>
-    <h1>Welcome!</h1>
+    <h1>Hi! I'm Tristan :)</h1>
     <div class="btn-group">
-        <a href="https://github.com/tristanGIANDO" class="btn" target="_blank">
-            <i class="fas fa-code"></i> Github
+    <a href="https://github.com/tristanGIANDO" class="btn" target="_blank">
+        <i class="fas fa-code"></i> Github
+    </a>
+    <div style="display: flex; gap: 1rem; justify-content: space-between;">
+        <a href="https://tristangiando.artstation.com/" class="btn" target="_blank" style="flex: 1;">
+            <i class="fas fa-cube"></i> Artstation
         </a>
-        <a href="https://tristangiando.artstation.com/" class="btn" target="_blank">
-            <i class="fas fa-cube"></i> ArtStation
-        </a>
-        <a href="https://www.linkedin.com/in/tristan-giandoriggio/" class="btn" target="_blank">
+        <a href="https://www.linkedin.com/in/tristan-giandoriggio/" class="btn" target="_blank" style="flex: 1;">
             <i class="fas fa-briefcase"></i> LinkedIn
         </a>
     </div>
+</div>
+
     <div class="gallery-group">
-        <a href="https://www.flickr.com/photos/tristanogiando/albums/72177720312530726" class="gallery-btn gallery1" target="_blank" title="Galerie Photo 1">
+        <a href="https://www.flickr.com/photos/tristanogiando/albums/72177720312530726" class="gallery-btn gallery1" target="_blank" title="Astrophotography">
             <div class="gallery-btn-content">
                 <i class="fas fa-camera"></i>
                 <span>Astrophotography</span>
             </div>
         </a>
-        <a href="https://www.flickr.com/photos/tristanogiando/albums/72177720326565236" class="gallery-btn gallery2" target="_blank" title="Galerie Photo 2">
+        <a href="https://www.flickr.com/photos/tristanogiando/albums/72177720326565236" class="gallery-btn gallery2" target="_blank" title="Wildlife photography">
             <div class="gallery-btn-content">
                 <i class="fas fa-camera"></i>
                 <span>Wildlife photography</span>
             </div>
         </a>
+        <a href="https://youtu.be/Ehmg0CeTD10?si=gzzSrMz0qCgOnSv1" class="gallery-btn gallery3" target="_blank" title="Film making">
+            <div class="gallery-btn-content">
+                <i class="fas fa-film"></i>
+                <span>Film making</span>
+            </div>
+        </a>
     </div>
+    <!-- Ajoute juste avant la fermeture de </body> -->
+    <div style="margin-top: auto; width: 100%; display: flex; justify-content: center; padding: 1rem;">
+        <div style="display: flex; gap: 1.2rem;">
+            <a href="https://www.instagram.com/tristanogiando/" target="_blank" style="text-decoration: none; color: rgb(70, 102, 255);">
+                <i class="fab fa-instagram" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="https://letterboxd.com/tristanogiando/" target="_blank" style="text-decoration: none; color: rgb(70, 102, 255);">
+                <i class="fab fa-letterboxd" style="font-size: 1.2rem;"></i>
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>
